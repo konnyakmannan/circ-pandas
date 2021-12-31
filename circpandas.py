@@ -1,7 +1,8 @@
 import numpy as np
 import pandas as pd
 
-@pd.api.extensions.register_series_accessor('circ')
+
+@pd.api.extensions.register_series_accessor("circ")
 class CircAccessor:
     def __init__(self, pandas_obj):
         self._obj = pandas_obj
@@ -16,4 +17,3 @@ class CircAccessor:
         if not radian:
             mean_angle = np.rad2deg(mean_angle)
         return mean_angle
-

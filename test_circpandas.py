@@ -1,7 +1,8 @@
+import pandas as pd
+from numpy import testing as npt
+
 import circpandas
 
-from numpy import testing as npt
-import pandas as pd
 
 def test_mean():
     ss = [
