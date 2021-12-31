@@ -1,2 +1,4 @@
+mypy
 pandas
+pandas-stubs
 pytest
