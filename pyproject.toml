@@ -10,6 +10,11 @@ isolated_build = true
 skip_missing_interpreters = true
 minversion = 3.14
 
+[gh-actions]
+python =
+    3.9: py39
+    3.10: py310
+
 [testenv]
 deps = -rrequirements.txt
 commands = pytest

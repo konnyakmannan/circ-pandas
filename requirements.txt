@@ -2,3 +2,5 @@ mypy
 pandas
 pandas-stubs
 pytest
+tox
+tox-gh-actions
