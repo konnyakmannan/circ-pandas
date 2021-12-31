@@ -1,6 +1,7 @@
-import circpandas
 import pandas as pd
 from numpy import testing as npt
+
+from circ import circpandas
 
 
 def test_mean():
