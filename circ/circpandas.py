@@ -17,3 +17,6 @@ class CircAccessor:
         if not radian:
             mean_angle = np.rad2deg(mean_angle)
         return mean_angle
+
+    def var(self, radian: bool = True) -> float:
+        ...
