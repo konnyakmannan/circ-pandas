@@ -1,24 +1,17 @@
 [build-system]
-requires = [ "setuptools >= 35.0.2", "wheel >= 0.29.0"]
-build-backend = "setuptools.build_meta"
+requires = [
+    'setuptools >= 44',
+    'wheel >= 0.30',
+    'setuptools_scm[toml]>=3.4',
+]
+build-backend = 'setuptools.build_meta'
 
-[tool.tox]
-legacy_tox_ini = """
-[tox]
-envlist = py39, py310
-isolated_build = true
-skip_missing_interpreters = true
-minversion = 3.14
+[tool.black]
+line-length = 88
+include = '\.pyi?$'
 
-[gh-actions]
-python =
-    3.9: py39
-    3.10: py310
-
-[testenv]
-deps = -rrequirements.txt
-commands = pytest
-"""
+[tool.isort]
+profile = 'black'
 
 [tool.mypy]
 python_version = 3.9
@@ -29,3 +22,10 @@ check_untyped_defs = true
 warn_return_any = true
 show_error_codes = true
 warn_unused_ignores = true
+
+[tool.setuptools_scm]
+write_to = 'src/circ/version.py'
+write_to_template = """
+\"\"\" Version information \"\"\"
+__version__ = "{version}"
+"""

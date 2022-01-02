@@ -5,7 +5,7 @@ from numpy import testing as npt
 from circ import circpandas
 
 
-def test_mean():
+def test_mean() -> None:
     ss = [
         pd.Series([160.0, -170.0]),
         pd.Series([45.0, -45.0, 0.0]),
@@ -16,7 +16,7 @@ def test_mean():
     npt.assert_allclose(actual, desired)
 
 
-def test_var():
+def test_var() -> None:
     ss = [
         pd.Series([90.0, -90.0]),
         pd.Series([90.0, 90.0]),
