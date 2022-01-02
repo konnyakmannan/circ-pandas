@@ -17,3 +17,13 @@ class CircAccessor:
         if not radian:
             mean_angle = np.rad2deg(mean_angle)
         return mean_angle
+
+    def var(self, radian: bool = True) -> float:
+        angles = self._obj
+        if not radian:
+            angles = angles.map(np.deg2rad)
+        mean_cosine = np.mean(np.cos(angles))
+        mean_sine = np.mean(np.sin(angles))
+        mean_vector_length = np.sqrt(mean_sine ** 2 + mean_cosine ** 2)
+        var_angle: float = 1.0 - mean_vector_length
+        return var_angle
