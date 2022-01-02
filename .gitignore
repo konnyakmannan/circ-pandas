@@ -11,3 +11,4 @@ dist
 /.*_cache
 .dmypy.json
 pip-wheel-metadata
+.venv
