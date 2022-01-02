@@ -3,7 +3,7 @@
 *.swp
 __pycache__
 .eggs
-/src/circ/version.py
+/src/circpandas/version.py
 build
 dist
 *.egg-info

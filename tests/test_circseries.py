@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 from numpy import testing as npt
 
-from circ import circpandas
+from circpandas import circseries
 
 
 def test_mean() -> None:

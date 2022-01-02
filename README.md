@@ -5,7 +5,8 @@
 ### Mean direction
 
 ```python
->> from circ import circpandas
+>> import pandas as pd
+>> from circpandas import circseries
 
 >> s = pd.Series([170, -160])
 >> s.circ.mean(radian=False)
@@ -15,7 +16,8 @@
 ### Circular variance
 
 ```python
->> from circ import circpandas
+>> import pandas as pd
+>> from circpandas import circseries
 
 >> s = pd.Series([45, -45])
 >> s.circ.var(radian=False)

@@ -24,7 +24,7 @@ show_error_codes = true
 warn_unused_ignores = true
 
 [tool.setuptools_scm]
-write_to = 'src/circ/version.py'
+write_to = 'src/circpandas/version.py'
 write_to_template = """
 \"\"\" Version information \"\"\"
 __version__ = "{version}"
